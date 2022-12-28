@@ -48,7 +48,7 @@
     <link href="assets/fontawesome/css/brands.min.css" rel="stylesheet" />
     <link href="assets/fontawesome/css/regular.min.css" rel="stylesheet" />
     <link href="assets/fontawesome/css/solid.min.css" rel="stylesheet" />
-    <script>
+    <script defer>
       document.addEventListener("DOMContentLoaded", () => {
         // Get all "navbar-burger" elements
         const $navbarBurgers = Array.prototype.slice.call(
@@ -511,10 +511,11 @@
                 <div class="card-image">
                   <figure class="image is-2by1">
                     <iframe
-                      class="has-ratio"
+                      class="youtube has-ratio"
                       width="560"
                       height="315"
-                      src="https://www.youtube-nocookie.com/embed/pj3iEdQNRlk"
+                      src=""
+                      data-src="https://www.youtube-nocookie.com/embed/pj3iEdQNRlk"
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -583,10 +584,11 @@
                 <div class="card-image">
                   <figure class="image is-2by1">
                     <iframe
-                      class="has-ratio"
+                      class="youtube has-ratio"
                       width="560"
                       height="315"
-                      src="https://www.youtube-nocookie.com/embed/7bOmBjYO25g"
+                      src=""
+                      data-src="https://www.youtube-nocookie.com/embed/7bOmBjYO25g"
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -671,10 +673,11 @@
                 <div class="card-image">
                   <figure class="image is-2by1">
                     <iframe
-                      class="has-ratio"
+                      class="youtube has-ratio"
                       width="560"
                       height="315"
-                      src="https://www.youtube-nocookie.com/embed/jh_mXG8HN5U"
+                      src=""
+                      data-src="https://www.youtube-nocookie.com/embed/jh_mXG8HN5U"
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -747,10 +750,11 @@
                 <div class="card-image">
                   <figure class="image is-2by1">
                     <iframe
-                      class="has-ratio"
+                      class="youtube has-ratio"
                       width="560"
                       height="315"
-                      src="https://www.youtube-nocookie.com/embed/videoseries?list=PLB3_OniSq3jYD-0LZhTxm7kpcplrz3SkE"
+                      src=""
+                      data-src="https://www.youtube-nocookie.com/embed/videoseries?list=PLB3_OniSq3jYD-0LZhTxm7kpcplrz3SkE"
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -831,10 +835,11 @@
                 <div class="card-image">
                   <figure class="image is-2by1">
                     <iframe
-                      class="has-ratio"
+                      class="youtube has-ratio"
                       width="560"
                       height="315"
-                      src="https://www.youtube-nocookie.com/embed/eESJZGJ9vuM"
+                      src=""
+                      data-src="https://www.youtube-nocookie.com/embed/eESJZGJ9vuM"
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -1233,5 +1238,16 @@
         </div>
       </div>
     </div>
+    <script defer>
+      const youtube_iframes = Array.from(
+        document.getElementsByClassName("youtube")
+      );
+      youtube_iframes.forEach((youtube_iframe) => {
+        const data_src = youtube_iframe.getAttribute("data-src");
+        if (data_src) {
+          youtube_iframe.setAttribute("src", data_src);
+        }
+      });
+    </script>
   </body>
 </html>
