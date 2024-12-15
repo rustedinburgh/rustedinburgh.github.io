@@ -4,7 +4,18 @@
       <header class="card-header">
         <p class="card-header-title">
           <a href="https://www.meetup.com/rust-edi/events/289582990/">
-            <i class="fa-solid fa-person-chalkboard"></i> {{ page.title }}</a
+            {% if page.extra.kind == "presentation" %}
+            <i class="fa-solid fa-person-chalkboard"></i> 
+            {% elif page.extra.kind == "beer_night" %}
+            <i class="fa-solid fa-beer-mug-empty"></i>
+            {% elif page.extra.kind == "coffee_morning" %}
+            <i class="fa-solid fa-mug-hot"></i>
+            {% elif page.extra.kind == "implementation_night" %}
+            <i class="fa-solid fa-keyboard"></i>
+            {% elif page.extra.kind == "discussion" %}
+            <i class="fa-solid fa-comments"></i> 
+            {% endif %}
+            {{ page.title }}</a
           >
         </p>
         <button class="card-header-icon">
