@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% import "page_macros.html" as page_macros %}
+
+{% block body %}
+{% set section = get_section(path="posts/_index.md") %}
+<section class="section">
+  <a name="past"></a>
+  <h2 class="title is-2">Past Meetups</h2>
+  {% for page in section.pages %}
+  {{ page_macros::meetup(page = page) }}
+  {% endfor %}
+</section>
+{% endblock body %}
