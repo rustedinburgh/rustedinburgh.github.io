@@ -55,7 +55,6 @@
       <div class="card-content">
         <div class="content">
             {{ page.content | safe }}
-            <br />
             <a href="{{ page.path }}">
             <time datetime="{{ page.date }}">
                 <i class="fa-solid fa-calendar-day"></i> {{ page.date | date(format="%e %B %Y") }}
