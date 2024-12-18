@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% import "page_macros.html" as page_macros %}
+
+{% block body %}
+{% set section = get_section(path="posts/_index.md") %}
+<section class="section">
+  <a name="past"></a>
+  <h2 class="title is-2">Past Meetups</h2>
+  {% for page in section.pages %}
+  {{ page_macros::meetup(page = page) }}
+  {% endfor %}
+</section>
+{% endblock body %}
+
+{% block sidebar %}
+<section class="section">
+  <a name="about"></a>
+  <h2 class="title is-2">About Us</h2>
+  <div class="content">
+    <p>
+      We believe the Rust language and community can benefit anyone
+      regardless of their level of ability or prior experience. "Rust
+      Edinburgh" is a local / online
+      <a href="https://www.meetup.com/rust-edi/">
+        <span class="icon">
+          <i class="fa-brands fa-meetup"></i>
+        </span>
+        Meetup
+      </a>
+      intended to help us achieve that goal locally.
+    </p>
+    <p>
+      For all meetings and interactions we follow
+      <a href="https://www.rust-lang.org/policies/code-of-conduct"
+        >Rust Lang Code of Conduct</a
+      >.
+    </p>
+    <p>
+      See our
+      <a href="https://www.youtube.com/@rustedinburgh7116">
+        <span class="icon">
+          <i class="fa-brands fa-youtube"></i>
+        </span>
+        YouTube channel
+      </a>
+      for some past meetings, and this page for extra information.
+      Please join our
+      <a href="https://www.meetup.com/rust-edi/">
+        <span class="icon">
+          <i class="fa-brands fa-meetup"></i>
+        </span>
+        Meetup group
+      </a>
+      if you're interested in attending future meetings.
+    </p>
+  </div>
+</section>
+<section class="section">
+  <a name="history"></a>
+  <h3 class="title is-3">History</h3>
+  <div class="content">
+    <p>
+      The
+      <a href="https://www.meetup.com/rust-edi/">
+        <span class="icon">
+          <i class="fa-brands fa-meetup"></i>
+        </span>
+        Meetup
+      </a>
+      was originally started in 2017 (it's believed this was by
+      members of <a href="http://codeplay.com/">Codeplay</a> and
+      <a href="http://maidsafe.net/">MaidSafe</a>). These Meetups ran
+      through 2018, but there was then a hiatus.
+    </p>
+    <p>
+      In 2020, the Meetup was taken over by Matt and
+      <a href="https://www.houseofmoran.com">Mike</a> when the main
+      Meetup group lost an owner. They managed to get a couple of
+      <i class="fa-solid fa-keyboard"></i> Implementation Nights under
+      their belt, but unbeknownst to them, this was on the cusp of
+      COVID. So, they had to switch quickly to online only.
+    </p>
+    <p>
+      During 2021/2022, most of the Meetups were opportunistic
+      <i class="fa-solid fa-beer-mug-empty"></i> Beer Evenings /
+      <i class="fa-solid fa-mug-hot"></i> Coffee Mornings with the
+      occasional online Meetup. It was hard to predict when venues
+      would be available or advisable.
+    </p>
+    <p>
+      In 2022, their was more interest in community in meeting up
+      physically, and also some availability of venues, so we ended
+      the year with our first physical talk since 2018!
+    </p>
+  </div>
+</section>
+<section class="section">
+  <h3 class="title is-3">Kinds of Meetup</h3>
+  <div class="content">
+    <dl>
+      <dt>
+        <i class="fa-solid fa-person-chalkboard"></i> Presentations /
+        <i class="fa-solid fa-comments"></i> Discussions:
+      </dt>
+      <dd>
+        Focussed on particular topics. Sometimes hosted, sometimes
+        online. These sometimes appear on
+        <a href="https://www.youtube.com/@rustedinburgh7116"
+          >our <i class="fa-brands fa-youtube"></i> YouTube channel</a
+        >.
+      </dd>
+
+      <dt>
+        <i class="fa-solid fa-beer-mug-empty"></i> Beer Evenings /
+        <i class="fa-solid fa-mug-hot"></i> Coffee Mornings:
+      </dt>
+      <dd>
+        Simple get-togethers for the community to chat about Rust and
+        related topics.
+      </dd>
+
+      <dt>
+        <i class="fa-solid fa-keyboard"></i> Implementation Nights:
+      </dt>
+      <dd>
+        People bring along any work in progress or anything they'd
+        like help with. Peers are there to help, so that we could work
+        through any problems together.
+      </dd>
+    </dl>
+  </div>
+</section>
+{% endblock sidebar %}

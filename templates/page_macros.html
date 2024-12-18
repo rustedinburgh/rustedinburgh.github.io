@@ -1,0 +1,67 @@
+{% macro meetup(page) %}
+<div class="block">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          <a href="https://www.meetup.com/rust-edi/events/289582990/">
+            {% if page.extra.kind == "presentation" %}
+            <i class="fa-solid fa-person-chalkboard"></i> 
+            {% elif page.extra.kind == "beer_evening" %}
+            <i class="fa-solid fa-beer-mug-empty"></i>
+            {% elif page.extra.kind == "coffee_morning" %}
+            <i class="fa-solid fa-mug-hot"></i>
+            {% elif page.extra.kind == "implementation_night" %}
+            <i class="fa-solid fa-keyboard"></i>
+            {% elif page.extra.kind == "discussion" %}
+            <i class="fa-solid fa-comments"></i> 
+            {% endif %}
+            {{ page.title }}</a
+          >
+        </p>
+        {% if page.extra.youtube_id %}
+        <button class="card-header-icon">
+            <a href="https://youtu.be/{{ page.extra.youtube_id }}">
+              <span class="icon is-medium">
+                <i class="fa-brands fa-youtube fa-2x"></i>
+              </span>
+            </a>
+        </button>
+        {% endif %}
+        <button class="card-header-icon">
+          <a href="{{ page.extra.event_url}}">
+            <span class="icon is-medium">
+              <i class="fa-brands fa-meetup fa-2x"></i>
+            </span>
+          </a>
+        </button>
+      </header>
+      {% if page.extra.youtube_id %}
+      <div class="card-image">
+        <figure class="image is-2by1">
+          <iframe
+            class="youtube has-ratio"
+            width="560"
+            height="315"
+            src=""
+            data-src="https://www.youtube-nocookie.com/embed/{{ page.extra.youtube_id }}"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </figure>
+      </div>
+      {% endif %}
+      <div class="card-content">
+        <div class="content">
+            {{ page.content | safe }}
+            <a href="{{ page.path }}">
+            <time datetime="{{ page.date }}">
+                <i class="fa-solid fa-calendar-day"></i> {{ page.date | date(format="%e %B %Y") }}
+            </time>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro meetup %}
