@@ -6,14 +6,12 @@ on:
       - main
   pull_request:
   schedule:
-    # - cron: '0 0 * * *' # Runs at 00:00 UTC daily
-    - cron: '*/5 * * * *' # Runs every 5 minutes
+    - cron: '0 0 * * *' # Runs at 00:00 UTC daily
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # if: github.event_name == 'pull_request' && github.ref != 'refs/heads/main'
-    if: (github.event_name == 'pull_request' || github.event_name == 'schedule') && github.ref != 'refs/heads/main'
+    if: github.event_name == 'pull_request' && github.ref != 'refs/heads/main'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
