@@ -1,3 +1,14 @@
+{% macro meetups() %}
+{% set section = get_section(path="posts/_index.md") %}
+<section class="section">
+  <a name="past"></a>
+  <h2 class="title is-2">Past Meetups</h2>
+  {% for page in section.pages %}
+  {{ self::meetup(page = page) }}
+  {% endfor %}
+</section>
+{% endmacro meetups %}
+
 {% macro meetup(page) %}
 <div class="block">
     <div class="card">
