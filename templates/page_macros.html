@@ -2,6 +2,9 @@
 {% set curr_time = now()|date(format="%s")|int %}
 {% set section = get_section(path="posts/_index.md") %}
 {% set pages = section.pages %}
+{% if pages | length > 0 %}
+{% set first_page_time = pages[0].date|date(format="%s")|int %}
+{% if first_page_time >= curr_time %}
 <section class="section">
   <a name="future"></a>
   <h2 class="title is-2">Future Meetups</h2>
@@ -12,6 +15,8 @@
   {% endif %}
   {% endfor %}
 </section>
+{% endif %}
+{% endif %}
 <section class="section">
   <a name="past"></a>
   <h2 class="title is-2">Past Meetups</h2>
