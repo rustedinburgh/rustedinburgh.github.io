@@ -135,6 +135,13 @@
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Last updated on {{ now() | date(format="%e %B %Y") }} at {{ now() | date(format="%l:%M%P") }}
+        </p>
+      </div>
+    </footer>
     <script defer>
       const youtube_iframes = Array.from(
         document.getElementsByClassName("youtube")
