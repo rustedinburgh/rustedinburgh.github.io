@@ -34,7 +34,7 @@
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          <a href="{{ page.extra.event_url }}">
+          <a href="{{ page.extra.event_url | safe }}">
             {% if page.extra.kind == "presentation" %}
             <i class="fa-solid fa-person-chalkboard"></i> 
             {% elif page.extra.kind == "beer_evening" %}
@@ -53,7 +53,7 @@
         </p>
         {% if page.extra.youtube_id %}
         <button class="card-header-icon">
-            <a href="https://youtu.be/{{ page.extra.youtube_id }}">
+            <a href="https://youtu.be/{{ page.extra.youtube_id | safe }}">
               <span class="icon is-medium">
                 <i class="fa-brands fa-youtube fa-2x"></i>
               </span>
@@ -61,7 +61,7 @@
         </button>
         {% endif %}
         <button class="card-header-icon">
-          <a href="{{ page.extra.event_url }}">
+          <a href="{{ page.extra.event_url | safe}}">
             <span class="icon is-medium">
               <i class="fa-brands fa-meetup fa-2x"></i>
             </span>
@@ -76,7 +76,7 @@
             width="560"
             height="315"
             src=""
-            data-src="https://www.youtube-nocookie.com/embed/{{ page.extra.youtube_id }}"
+            data-src="https://www.youtube-nocookie.com/embed/{{ page.extra.youtube_id | safe }}"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -88,7 +88,7 @@
       <div class="card-content">
         <div class="content">
             {{ page.content | safe }}
-            <a href="{{ page.path }}">
+            <a href="{{ page.path | safe}}">
             <time datetime="{{ page.date }}">
                 <i class="fa-solid fa-calendar-day"></i> {{ page.date | date(format="%e %B %Y") }}
             </time>
