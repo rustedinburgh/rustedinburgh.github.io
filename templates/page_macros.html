@@ -34,7 +34,7 @@
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          <a href="https://www.meetup.com/rust-edi/events/289582990/">
+          <a href="{{ page.extra.event_url }}">
             {% if page.extra.kind == "presentation" %}
             <i class="fa-solid fa-person-chalkboard"></i> 
             {% elif page.extra.kind == "beer_evening" %}
@@ -61,7 +61,7 @@
         </button>
         {% endif %}
         <button class="card-header-icon">
-          <a href="{{ page.extra.event_url}}">
+          <a href="{{ page.extra.event_url }}">
             <span class="icon is-medium">
               <i class="fa-brands fa-meetup fa-2x"></i>
             </span>
