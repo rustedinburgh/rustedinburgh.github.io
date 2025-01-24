@@ -38,8 +38,6 @@
       content="https://rustandfriends.org/images/hill_logo_meetup1.png"
     />
 
-    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-
     <link
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
       rel="stylesheet"
@@ -48,80 +46,47 @@
     <link href="/fontawesome/css/brands.min.css" rel="stylesheet" />
     <link href="/fontawesome/css/regular.min.css" rel="stylesheet" />
     <link href="/fontawesome/css/solid.min.css" rel="stylesheet" />
-    <script defer>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(
-          document.querySelectorAll(".navbar-burger"),
-          0
-        );
-
-        // Add a click event on each of them
-        $navbarBurgers.forEach((el) => {
-          el.addEventListener("click", () => {
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle("is-active");
-            $target.classList.toggle("is-active");
-          });
-        });
-      });
-    </script>
     <script defer data-domain="rustandfriends.org" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.js"></script>
   </head>
   <body>
     <div class="container">
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="https://rustandfriends.org/">
+          <a class="navbar-item" href="/">
             <i class="fa-brands fa-rust fa-2x"></i>
           </a>
 
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarMenu"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+          <a class="navbar-item" href="/#about">
+            About Us
           </a>
+          <div class="navbar-item">
+            <a href="https://discord.gg/fNYv22TRx6">
+              <span class="icon is-medium">
+                <i class="fa-brands fa-discord fa-2x"></i>
+              </span>
+            </a>
+          </div>
+          <div class="navbar-item">
+            <a href="https://www.youtube.com/@rustandfriendsorg">
+              <span class="icon is-medium">
+                <i class="fa-brands fa-youtube fa-2x"></i>
+              </span>
+            </a>
+          </div>
+          <div class="navbar-item">
+            <a href="https://www.meetup.com/rust-edi/">
+              <span class="icon is-medium">
+                <i class="fa-brands fa-meetup fa-2x"></i>
+              </span>
+            </a>
+          </div>
         </div>
 
         <div id="navbarMenu" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item" href="/#about">
-              About Us
-            </a>
           </div>
 
           <div class="navbar-end">
-            <div class="navbar-item">
-              <a href="https://discord.gg/fNYv22TRx6">
-                <span class="icon is-medium">
-                  <i class="fa-brands fa-discord fa-2x"></i>
-                </span>
-              </a>
-            </div>
-            <div class="navbar-item">
-              <a href="https://www.youtube.com/@rustandfriendsorg">
-                <span class="icon is-medium">
-                  <i class="fa-brands fa-youtube fa-2x"></i>
-                </span>
-              </a>
-            </div>
-            <div class="navbar-item">
-              <a href="https://www.meetup.com/rust-edi/">
-                <span class="icon is-medium">
-                  <i class="fa-brands fa-meetup fa-2x"></i>
-                </span>
-              </a>
-            </div>
           </div>
         </div>
       </nav>
