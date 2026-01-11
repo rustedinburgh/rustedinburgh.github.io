@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- HTML Meta Tags -->
+    <title></title>
+    <meta
+      name="description"
+      content="Website for the Rust language community in Edinburgh"
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://rustandfriends.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rust and Friends" />
+    <meta
+      property="og:description"
+      content="Website for the Rust language community in Edinburgh"
+    />
+    <meta
+      property="og:image"
+      content="https://rustandfriends.org/images/hill_logo_meetup1.png"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="rustandfriends.org" />
+    <meta property="twitter:url" content="https://rustandfriends.org" />
+    <meta name="twitter:title" content="Rust and Friends" />
+    <meta
+      name="twitter:description"
+      content="Website for the Rust language community in Edinburgh"
+    />
+    <meta
+      name="twitter:image"
+      content="https://rustandfriends.org/images/hill_logo_meetup1.png"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+      rel="stylesheet"
+    />
+    <link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="/fontawesome/css/brands.min.css" rel="stylesheet" />
+    <link href="/fontawesome/css/regular.min.css" rel="stylesheet" />
+    <link href="/fontawesome/css/solid.min.css" rel="stylesheet" />
+    <script defer data-domain="rustandfriends.org" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <i class="fa-brands fa-rust fa-2x"></i>
+          </a>
+
+          <a class="navbar-item" href="/#about">
+            About Us
+          </a>
+          <div class="navbar-item">
+            <a href="https://discord.gg/fNYv22TRx6">
+              <span class="icon is-medium">
+                <i class="fa-brands fa-discord fa-2x"></i>
+              </span>
+            </a>
+          </div>
+          <div class="navbar-item">
+            <a href="https://www.youtube.com/@rustandfriendsorg">
+              <span class="icon is-medium">
+                <i class="fa-brands fa-youtube fa-2x"></i>
+              </span>
+            </a>
+          </div>
+          <div class="navbar-item">
+            <a href="https://www.meetup.com/rust-edi/">
+              <span class="icon is-medium">
+                <i class="fa-brands fa-meetup fa-2x"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-start">
+          </div>
+
+          <div class="navbar-end">
+          </div>
+        </div>
+      </nav>
+      <figure class="image">
+        <img
+          srcset="
+            /images/hill_logo_meetup1_header2.960x335.webp  960w,
+            /images/hill_logo_meetup1_header2.webp         1200w
+          "
+          sizes="(min-width: 1420px) 1344px, (min-width: 1220px) 1152px, (min-width: 1040px) 960px, 100vw"
+          src="/images/hill_logo_meetup1_header2.webp"
+        />
+      </figure>
+      <div class="columns">
+        <div class="column is-two-thirds">
+          
+<section class="section">
+
+<div class="block">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          <a href="https://www.meetup.com/rust-and-friends/events/293820336/">
+            
+            <i class="fa-solid fa-person-chalkboard"></i> 
+            
+            Reasoning about Rust: an introduction to Rustdoc’s JSON format</a
+          >
+        </p>
+        
+        <button class="card-header-icon">
+          <a href="https://www.meetup.com/rust-and-friends/events/293820336/">
+            <span class="icon is-medium">
+              <i class="fa-brands fa-meetup fa-2x"></i>
+            </span>
+          </a>
+        </button>
+      </header>
+      
+      <div class="card-content">
+        <div class="content">
+            <p>An online talk from <a href="https://lpalmieri.com/"><i class="fa-solid fa-person"></i> Luca Palmieri</a> (see <a href="https://rustandfriends.org/posts/2023-07-13/#bio">Speaker bio</a>):</p>
+<blockquote>
+<p>Macros are the primary mechanism for metaprogramming in Rust, either to perform code generation or enforce constraints at compile-time that are not easily captured by the type system (e.g. sqlx).</p>
+<p>Macros are also limited: their input is a stream of tokens, with no type-level information.</p>
+<p>Up until last year, you had to hook directly into the compiler internals to get a more featureful representation. This is no longer the case, thanks to Rustdoc’s JSON format: an information-rich representation of your Rust API in a machine-parsable format (with a versioned schema!).</p>
+<p>We will introduce the feature, look at the structure of the data and cover a few of the usecases where it shines. You will leave the talk with a basic understanding of the format and ideas on how you could leverage it to build tools that enhance your own Rust workflows.</p>
+</blockquote>
+<h4 id="bio">Speaker Bio</h4>
+<blockquote>
+<p><a href="https://lpalmieri.com/"><i class="fa-solid fa-person"></i> Luca Palmieri</a> builds technology products for a living, and has been doing so for a while. His current focus is on backend development, software architecture and the Rust programming language.</p>
+<p>He currently works at MainMatter as a Principal Engineering Consultant. He partners with teams across the industry to make sure they succeed in adopting or scaling their Rust usage, where it makes sense to do so. He was formerly at AWS and TrueLayer.</p>
+<p>He has been part of the Rust community since 2018 and is best known as the author of “Zero to Production in Rust”, an introduction to using Rust for backend development.</p>
+<p>When he is not coding, you’ll find him baking cakes or rolling pasta sheets.</p>
+</blockquote>
+
+            <a href="/posts/2023-07-13/">
+            <time datetime="2023-07-13">
+                <i class="fa-solid fa-calendar-day"></i> 13 July 2023
+            </time>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+        </div>
+        <div class="column">
+          
+          
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Last updated on 11 January 2026 at  1:02am
+        </p>
+      </div>
+    </footer>
+    <script defer>
+      const youtube_iframes = Array.from(
+        document.getElementsByClassName("youtube")
+      );
+      youtube_iframes.forEach((youtube_iframe) => {
+        const data_src = youtube_iframe.getAttribute("data-src");
+        if (data_src) {
+          youtube_iframe.setAttribute("src", data_src);
+        }
+      });
+    </script>
+  </body>
+</html>
