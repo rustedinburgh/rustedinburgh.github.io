@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- HTML Meta Tags -->
+    <title></title>
+    <meta
+      name="description"
+      content="Website for the Rust language community in Edinburgh"
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://rustandfriends.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rust and Friends" />
+    <meta
+      property="og:description"
+      content="Website for the Rust language community in Edinburgh"
+    />
+    <meta
+      property="og:image"
+      content="https://rustandfriends.org/images/hill_logo_meetup1.png"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="rustandfriends.org" />
+    <meta property="twitter:url" content="https://rustandfriends.org" />
+    <meta name="twitter:title" content="Rust and Friends" />
+    <meta
+      name="twitter:description"
+      content="Website for the Rust language community in Edinburgh"
+    />
+    <meta
+      name="twitter:image"
+      content="https://rustandfriends.org/images/hill_logo_meetup1.png"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+      rel="stylesheet"
+    />
+    <link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="/fontawesome/css/brands.min.css" rel="stylesheet" />
+    <link href="/fontawesome/css/regular.min.css" rel="stylesheet" />
+    <link href="/fontawesome/css/solid.min.css" rel="stylesheet" />
+    <script defer data-domain="rustandfriends.org" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <i class="fa-brands fa-rust fa-2x"></i>
+          </a>
+
+          <a class="navbar-item" href="/#about">
+            About Us
+          </a>
+          <div class="navbar-item">
+            <a href="https://discord.gg/fNYv22TRx6">
+              <span class="icon is-medium">
+                <i class="fa-brands fa-discord fa-2x"></i>
+              </span>
+            </a>
+          </div>
+          <div class="navbar-item">
+            <a href="https://www.youtube.com/@rustandfriendsorg">
+              <span class="icon is-medium">
+                <i class="fa-brands fa-youtube fa-2x"></i>
+              </span>
+            </a>
+          </div>
+          <div class="navbar-item">
+            <a href="https://www.meetup.com/rust-edi/">
+              <span class="icon is-medium">
+                <i class="fa-brands fa-meetup fa-2x"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-start">
+          </div>
+
+          <div class="navbar-end">
+          </div>
+        </div>
+      </nav>
+      <figure class="image">
+        <img
+          srcset="
+            /images/hill_logo_meetup1_header2.960x335.webp  960w,
+            /images/hill_logo_meetup1_header2.webp         1200w
+          "
+          sizes="(min-width: 1420px) 1344px, (min-width: 1220px) 1152px, (min-width: 1040px) 960px, 100vw"
+          src="/images/hill_logo_meetup1_header2.webp"
+        />
+      </figure>
+      <div class="columns">
+        <div class="column is-two-thirds">
+          
+<section class="section">
+
+<div class="block">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          <a href="https://www.meetup.com/rust-and-friends/events/314300802/">
+            
+            <i class="fa-solid fa-person-chalkboard"></i> 
+            
+            Rust May Talks: Aetherus + Pgrx</a
+          >
+        </p>
+        
+        <button class="card-header-icon">
+          <a href="https://www.meetup.com/rust-and-friends/events/314300802/">
+            <span class="icon is-medium">
+              <i class="fa-brands fa-meetup fa-2x"></i>
+            </span>
+          </a>
+        </button>
+      </header>
+      
+      <div class="card-content">
+        <div class="content">
+            <p>Tonight we’ll be hearing from:</p>
+<p>Cristian Bourceanu on "Aetherus: Monte-Carlo radiative transfer with photon history tracking of interactions for materials and surfaces". From Cristian:</p>
+<ul>
+<li>
+<p>"Monte-Carlo simulations are ubiquous in producing simulated results for problems that are challenging to solve numerically or analytically, but they can be described in terms of statistics. <a href="https://github.com/aetherus-wg">Aetherus</a> is the first known multispectral time-resolved Monte-Carlo simulation, making extensive use of the Rust ecosystem: <code>serde</code>, <code>rayon</code>, <code>nalegbra</code> with SIMD speed-up. The big challenge is to analyse the results, for which we have added a novel events tracking method, using an encoding inspired from RISC-V 32-bit instruction encoding. This enables to group signals together based on various criteria and understand the effects underlying the detected photons histogram. A Domain Specific Language (DSL) was developed with <code>chumsky</code> to faciliate filtering based on an intuitive script."</p>
+</li>
+<li>
+<p>"I am a PhD student at University of Edinburgh, investigating Multispectral LIDAR. Previously worked as a RISC-V CPU design engineer at Codasip and a firmware engineer at Hypervolt. Now trying to bring some of this knowledge together."</p>
+</li>
+<li>
+<p><a href="https://git-pages.ecdf.ed.ac.uk/lidar-research/latex-docs/rust-friends-aetherus/#/title-slide">Slides</a> and related content:</p>
+<ul>
+<li><a href="https://github.com/aetherus-wg/Aetherus">Aetherus: MCRT simulation</a></li>
+<li><a href="https://github.com/aetherus-wg/aetherus-events">Events Ledger: History tracking of photons</a></li>
+<li><a href="https://github.com/aetherus-wg/eldritch-trace">Eldritch(Events)-Trace DSL</a></li>
+<li><a href="https://github.com/crisbour/mesh-splitting">Interface mesh coplanar intersections</a></li>
+</ul>
+</li>
+</ul>
+<p><a href="https://hugotunius.se">Hugo Tunius</a> on <a href="https://github.com/k0nserv/plid/blob/main/docs/slides.md">"Lessons from building a custom Postgres type with Rust and Pgrx"</a></p>
+<ul>
+<li>Hugo was a last-minute replacement after <a href="https://blog.fallible.net/">Fallible Things</a> couldn't present due to illness 😞. Get well soon <a href="https://blog.fallible.net/">Fallible Things</a>!</li>
+</ul>
+<p>This time we'll be trying out hosting provided by the <a href="https://local.ed.ac.uk/community-rooms">Edinburgh Community Rooms</a> project at Patersons Land (no slant against our previous company hosts, who are still much appreciated, it's just good to mix things up occasionally 😀).</p>
+<p>Plan for the evening:</p>
+<ul>
+<li>18:30: doors open</li>
+<li>19:00 → 20:00: talks + q/a</li>
+<li>20:00: move for drinks 🍻 to Holyrood 9A, where we have a table booked (this is nearby Patersons Land)</li>
+</ul>
+
+            <a href="/posts/2026-05-07/">
+            <time datetime="2026-05-07">
+                <i class="fa-solid fa-calendar-day"></i>  7 May 2026
+            </time>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+        </div>
+        <div class="column">
+          
+          
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Last updated on 31 May 2026 at  2:14am
+        </p>
+      </div>
+    </footer>
+    <script defer>
+      const youtube_iframes = Array.from(
+        document.getElementsByClassName("youtube")
+      );
+      youtube_iframes.forEach((youtube_iframe) => {
+        const data_src = youtube_iframe.getAttribute("data-src");
+        if (data_src) {
+          youtube_iframe.setAttribute("src", data_src);
+        }
+      });
+    </script>
+  </body>
+</html>
